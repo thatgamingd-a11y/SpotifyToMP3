@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview Finder — search songs, play &amp; download 30s previews</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+</head>
+<body>
+  <header class="hero">
+    <h1><span class="logo">♪</span> Preview Finder</h1>
+    <p class="tagline">Search any song, listen to a 30-second preview, download it as MP3 or WAV.</p>
+    <form id="search-form" class="search-bar" autocomplete="off">
+      <input id="search-input" type="search" placeholder="Search for a song or artist…" aria-label="Search for a song" required>
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main>
+    <div id="status" class="status" hidden></div>
+    <ul id="results" class="results" aria-live="polite"></ul>
+  </main>
+
+  <footer>
+    <p>Previews and search results provided by the iTunes Search API. Previews are 30-second clips for personal listening.</p>
+  </footer>
+
+  <script src="/vendor/lame.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
