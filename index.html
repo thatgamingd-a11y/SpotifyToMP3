@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>StepMap — Step Tracker</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👣</text></svg>" />
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">👣 StepMap</div>
+    <div class="today">
+      <span id="todaySteps" class="today-steps">0</span>
+      <span class="today-label">steps today</span>
+    </div>
+  </header>
+
+  <main>
+    <div id="map"></div>
+
+    <section class="panel">
+      <div class="stats">
+        <div class="stat">
+          <span id="walkSteps" class="stat-value">0</span>
+          <span class="stat-label">this walk</span>
+        </div>
+        <div class="stat">
+          <span id="walkDistance" class="stat-value">0 m</span>
+          <span class="stat-label">distance</span>
+        </div>
+        <div class="stat">
+          <span id="walkTime" class="stat-value">0:00</span>
+          <span class="stat-label">time</span>
+        </div>
+      </div>
+
+      <button id="trackBtn" class="track-btn">▶ Start walk</button>
+      <p id="status" class="status">Press start, then keep your phone with you while you walk.</p>
+
+      <details class="history">
+        <summary>History &amp; totals</summary>
+        <div class="totals">
+          <span id="totalSteps">0 steps</span> ·
+          <span id="totalDistance">0 km</span> ·
+          <span id="totalWalks">0 walks</span> all time
+        </div>
+        <ul id="historyList" class="history-list"></ul>
+        <button id="clearBtn" class="clear-btn">Erase all my data</button>
+      </details>
+    </section>
+  </main>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
